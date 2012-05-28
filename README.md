@@ -37,9 +37,9 @@ Si necesitamos que el control aparezca desplazado con respecto a los límites �
 
 ## Agregar botones
 
-Tan solo tenemos que utilizar el método `addButtonWithImage:index:`. Posteriormente, cuando el botón sea pulsado, se mandará el mensaje `didPressAdditionalButtonWithIndex:` con el `index` del botón pulsado al delegado indicado en el inicializador:
+Tan solo tenemos que utilizar el método `addButtonWithImage:index:`. Posteriormente, cuando el botón sea pulsado, se mandará el mensaje `overlayMenuView:didActivateAdditionalButtonWithIndex:` con el `index` del botón pulsado al delegado indicado en el inicializador:
 
-	- (void)didPressAdditionalButtonWithIndex:(NSInteger)index
+	- (void)overlayMenuView:(QBKOverlayMenuView *)overlayMenuView didActivateAdditionalButtonWithIndex:(NSInteger)index
 	{
     	NSLog(@"Botón pulsado con índice: %d", index);
 	}
